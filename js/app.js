@@ -87,7 +87,7 @@ function homeView() {
     const mistakes = progress.getMistakes({ limit: 3 });
     return `<section class="view-header" aria-labelledby="home-heading">
         <span class="eyebrow">Your course</span>
-        <h1 id="home-heading">Keep the next step small.</h1>
+        <h1 id="home-heading">Heya, hope the school year goes well for y'all</h1>
         <p class="view-header__lede">A full year of Precalculus is organized into 100 focused lessons. Learn the idea, see worked examples, practice it, and use feedback to decide what to review next.</p>
         <div class="view-actions">
             <a class="button" href="#/lesson/${lastLesson.id}" data-route>Continue ${lastLesson.id}</a>
