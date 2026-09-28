@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f7f5ef">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="A mobile-first Precalculus classroom built for GitHub Pages.">
+    <title>Precalculus Classroom</title>
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/lessons.css">
+    <link rel="stylesheet" href="./css/mobile.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to lesson content</a>
+
+    <div id="app-shell" class="app-shell">
+        <header class="site-header" aria-label="Course header">
+            <a class="brand" href="#/home" data-route aria-label="Precalculus Classroom home">
+                <span class="brand__mark" aria-hidden="true">P</span>
+                <span class="brand__copy">
+                    <span class="brand__course">Precalculus</span>
+                    <span class="brand__name">Classroom</span>
+                </span>
+            </a>
+
+            <div class="site-header__context" aria-live="polite">
+                <span id="route-eyebrow" class="eyebrow">Course</span>
+                <strong id="route-title">Home</strong>
+            </div>
+
+            <div class="site-header__actions">
+                <a class="header-action" href="#/progress" data-route>
+                    <span class="header-action__label">Progress</span>
+                    <span id="header-progress" class="header-action__value">0%</span>
+                </a>
+            </div>
+        </header>
+
+        <div class="workspace">
+            <aside id="desktop-course-nav" class="course-sidebar" aria-label="Course outline">
+                <div class="course-sidebar__inner">
+                    <div class="course-sidebar__heading">
+                        <span class="eyebrow">Course outline</span>
+                        <strong>Precalculus</strong>
+                    </div>
+                    <div id="desktop-outline" data-content-slot="course-outline"></div>
+                </div>
+            </aside>
+
+            <main id="main-content" tabindex="-1">
+                <div id="app-view" class="route-view" data-content-slot="route-view"></div>
+            </main>
+        </div>
+
+        <nav id="mobile-nav" class="mobile-nav" aria-label="Primary navigation">
+            <a href="#/home" data-route data-route-name="home">
+                <span class="mobile-nav__icon" aria-hidden="true">⌂</span>
+                <span>Home</span>
+            </a>
+            <a href="#/course" data-route data-route-name="course">
+                <span class="mobile-nav__icon" aria-hidden="true">≡</span>
+                <span>Lessons</span>
+            </a>
+            <a href="#/practice" data-route data-route-name="practice">
+                <span class="mobile-nav__icon" aria-hidden="true">✓</span>
+                <span>Practice</span>
+            </a>
+            <a href="#/progress" data-route data-route-name="progress">
+                <span class="mobile-nav__icon" aria-hidden="true">◔</span>
+                <span>Progress</span>
+            </a>
+        </nav>
+    </div>
+
+    <noscript>
+        <div class="noscript-message">
+            This classroom requires JavaScript for lessons, practice, and saved progress.
+        </div>
+    </noscript>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
